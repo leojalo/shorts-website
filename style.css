@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Scroll container */
+.feed {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* One short = one screen */
+.short {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Video */
+.short video {
+  width: 100%;
+  max-width: 360px;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Progress bar */
+.progress {
+  width: 100%;
+  max-width: 360px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: white;
+  transition: width 0.1s linear;
+}
+
+/* Brainrot text */
+.brainrot {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.9;
+}
